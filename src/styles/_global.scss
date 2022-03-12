@@ -1,0 +1,96 @@
+/* Global styles
+  ========================================================================== */
+
+*::selection {
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px, 3.5rem = 35px; */
+  /* custom scrollbar for firefox, soon to be default? */
+  scrollbar-width: normal;
+  scrollbar-color: var(--accent) var(--black-soft);
+  /* custom scrollbar for webkit (safari / chrome) */
+  /* use vw unit if you don't want the scrollbar to grow on zoom */
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    background: rgba(254, 249, 247, 1);
+    background: var(--black-soft);
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--accent);
+  }
+}
+
+body {
+  color: var(--white);
+  background: var(--black-100);
+  font-family: var(--font-mono);
+  font-size: 1.6rem;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: var(--container-max-width);
+}
+
+.inner-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Global typography styles
+  ========================================================================== */
+
+:is(h1, h2, h3, h4, h5, h6) {
+  margin: 0;
+}
+
+h1 {
+  line-height: 1.2;
+  font-weight: 100;
+}
+h2 {
+  font-size: 5.8rem;
+  font-weight: 100;
+  line-height: 1.2;
+}
+h3 {
+  font-size: 3.6rem;
+  font-weight: 100;
+  line-height: 1.4;
+}
+
+p,
+input,
+a,
+textarea,
+::placeholder {
+  margin: 0;
+  font-size: 1.6rem;
+  letter-spacing: 0.101rem;
+  color: var(--theme-text-light);
+}
+
+a {
+  display: inline;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+figure {
+  margin: 0;
+}

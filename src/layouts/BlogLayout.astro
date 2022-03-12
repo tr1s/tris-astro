@@ -1,0 +1,20 @@
+---
+import Head from '../components/Head.astro';
+import BlogPost from '../components/BlogPost.astro';
+
+
+const { content } = Astro.props;
+const { title, description, publishDate, author, heroImage, permalink, alt } = content;
+---
+
+<html lang={content.lang || 'en'}>
+  <Head title="Home" description={description} permalink={permalink} />
+
+  <body class="blog-layout">
+    <div class="wrapper">
+			<BlogPost {title} {author} {heroImage} {publishDate} {alt}>
+				<slot />
+			</BlogPost>
+		</div>
+	</body>
+</html>

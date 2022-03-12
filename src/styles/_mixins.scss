@@ -1,0 +1,74 @@
+/* Media Queries
+========================================================================== */
+
+$breakpoints: (
+  'phone': 400px,
+  'phone-wide': 480px,
+  'phablet': 560px,
+  'tablet-small': 640px,
+  'tablet': 768px,
+  'tablet-wide': 1024px,
+  'desktop': 1248px,
+  'desktop-wide': 1440px,
+);
+
+@mixin mq($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: $width - 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+/* BREAKPOINTS */
+@mixin respond-to($breakpoint) {
+  @if $breakpoint== 'mobile-small' {
+    @media (max-width: 320px) {
+      @content;
+    }
+  } @else if $breakpoint== 'mobile' {
+    @media (max-width: 375px) {
+      @content;
+    }
+  } @else if $breakpoint== 'mobile-large' {
+    @media (max-width: 414px) {
+      @content;
+    }
+  } @else if $breakpoint== 'tablet' {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $breakpoint== 'tablet-large' {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  } @else if $breakpoint== 'desktop-13' {
+    @media (max-width: 1280px) {
+      @content;
+    }
+  } @else if $breakpoint== 'desktop-15' {
+    @media (max-width: 1440px) {
+      @content;
+    }
+  } @else if $breakpoint== 'desktop-16' {
+    @media (min-width: 1792px) {
+      @content;
+    }
+  } @else {
+    @media ($breakpoint) {
+      @content;
+    }
+  }
+}
+
+/* CENTERING */
+@mixin centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
