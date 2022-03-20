@@ -1,8 +1,7 @@
 ---
-import Head from '../components/Head.astro';
-import Header from '../components/Header.astro';
-import BlogList from '../components/BlogList.astro';
-import Layout from '../layouts/Layout.astro';
+import Head from '@components/Head.astro';
+import BlogList from '@components/BlogList.astro';
+import Layout from '@layouts/Layout.astro';
 
 // Component Script:
 // You can write any JavaScript/TypeScript that you'd like here.
@@ -20,8 +19,6 @@ const sortedPosts = allPosts.sort((a, b) => new Date(b.publishDate).valueOf() - 
 <html lang="en">
 	<Head title={title} description={description} permalink={permalink} />
   <Layout>
-    <Header />
-
     <section aria-label="Blog post list">
       {sortedPosts.map((post) => <BlogList post={post} />)}
     </section>

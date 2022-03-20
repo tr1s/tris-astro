@@ -1,17 +1,34 @@
 :root {
-  --font-serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman,
-    Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji,
-    Segoe UI Emoji, Segoe UI Symbol;
+  --font-fallback-serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif,
+    Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 
-  --font-sans-serif: -apple-system, BlinkMacSystemFont, avenir next, avenir,
-    segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+  --font-fallback-sans-serif: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
+    helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
 
-  --font-fallback: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
-    sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  --font-body: 'GTFAdieuTRIAL', var(--font-fallback-sans-serif);
+  --font-primary: var(--font-body);
+}
 
-  --font-body: "IBM Plex Sans", var(--font-fallback);
-  --font-mono: "IBM Plex Mono", Consolas, "Andale Mono WT", "Andale Mono",
-    "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
-    "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco,
-    "Courier New", Courier, monospace;
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&display=swap');
+
+@font-face {
+  font-family: 'GTFAdieuTRIAL';
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url('/public/fonts/GTFAdieuTRIAL-Light.otf') format('opentype');
+}
+@font-face {
+  font-family: 'GTFAdieuTRIAL';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('/public/fonts/GTFAdieuTRIAL-Regular.otf') format('opentype');
+}
+@font-face {
+  font-family: 'GTFAdieuTRIAL';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('/public/fonts/GTFAdieuTRIAL-Bold.otf') format('opentype');
 }

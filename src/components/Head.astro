@@ -2,7 +2,6 @@
 const { title, description, permalink } = Astro.props;
 ---
 
-
 <head>
   <!-- Global Metadata -->
   <meta charset="utf-8" />
@@ -30,8 +29,13 @@ const { title, description, permalink } = Astro.props;
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@400;700&display=swap" />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@400;700&display=swap"
+  />
 
   <!-- Global Styles -->
   <link rel="stylesheet" href="/src/styles/index.scss" />
+
+  <script defer>console.log('Built with love — https://tris.codes 💫');</script>
 </head>

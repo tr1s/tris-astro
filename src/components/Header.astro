@@ -1,32 +1,33 @@
 <header class="header">
-  <p class="url">
-    <div class="url-top">https<span class="punctuation">://</span>
-    </div>
-    <div class="url-bottom">
-      <span class="keyword">tris<span class="punctuation">.</span></span>codes
-    </div>
-  </p>
-  <p>Logo</p>
+  <div class="url">
+    <p class="url-top">https<span class="punctuation">://</span></p>
+    <p class="url-bottom">
+      <span class="keyword">tris<span class="punctuation">.</span></span>codes<span
+        class="punctuation">/</span
+      >``
+    </p>
+  </div>
 </header>
 
 <style lang="scss">
-  @use "../styles/_mixins.scss" as *;
+  @use '../styles/_mixins.scss' as *;
 
   .header {
-    padding: 2rem;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 2px solid #E1E1E1;
+    padding: 1rem;
+    border-bottom: 1px solid #e1e1e1;
+    margin-bottom: 2rem;
     .url {
       color: #848484;
-      display: flex;
+      display: inline-block;
       flex-direction: column;
     }
     .punctuation {
       color: #4a4a4a;
+      font-weight: 400;
     }
     .keyword {
       color: #000000;
+      font-weight: 400;
     }
   }
 </style>

@@ -1,6 +1,6 @@
 ---
 setup: |
-  import Layout from '../../layouts/BlogLayout.astro'
+  import Layout from '@layouts/BlogLayout.astro'
 title: Astro World!
 publishDate: 12 Sep 2021
 name: Nate Moore

@@ -1,29 +1,22 @@
 ---
-import Head from '../components/Head.astro';
-import Layout from '../layouts/Layout.astro';
+import Head from '@components/Head.astro';
+import Layout from '@layouts/Layout.astro';
 
 // Component Script:
 // You can write any JavaScript/TypeScript that you'd like here.
 // It will run during the build, but never in the browser.
 // All variables are available to use in the HTML template below.
 const title = 'Home';
-const description = 'Tristan Lawrence is a front-end engineer, digital creative, and music producer. Welcome to his digital garden!';
+const description =
+  'Tristan Lawrence is a front-end engineer, digital creative, and music producer. Welcome to his digital garden!';
 const permalink = 'https://tris.codes/';
 ---
 
 <html lang="en">
-	<Head title={title} description={description} permalink={permalink} />
-  <Layout>
-    Content...
-  </Layout>
+  <Head {title} {description} {permalink} />
+  <Layout>Content...</Layout>
 </html>
 
 <style lang="scss">
-  // @import "../styles/index.scss";
-</style>
 
-<script>
-  // Will be rendered into the HTML exactly as written!
-  // ESM imports will not be resolved relative to the file.
-  console.log('Built by https://tris.codes!')
-</script>
+</style>

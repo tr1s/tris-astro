@@ -1,6 +1,6 @@
 ---
 setup: |
-  import Layout from '../../layouts/BlogLayout.astro'
+  import Layout from '@layouts/BlogLayout.astro'
 title: Tris World!
 publishDate: 12 Jan 2022
 name: Tris
