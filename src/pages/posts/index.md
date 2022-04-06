@@ -6,6 +6,7 @@ publishDate: 12 Sep 2021
 name: Nate Moore
 value: 128
 description: Just a Hello World Post!
+draft: false
 ---
 
 This is so cool!
