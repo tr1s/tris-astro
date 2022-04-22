@@ -7,9 +7,6 @@ const SectionTitle = () => {
     <section className={styles.projects}>
       <div className="inner-wrapper">
         <h2>Projects</h2>
-        {/* <Marquee>
-          <h2>Projects</h2>
-        </Marquee> */}
         <Marquee play>
           I can be a React component, multiple React components, or just some text.
         </Marquee>
