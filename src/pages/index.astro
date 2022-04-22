@@ -1,6 +1,8 @@
 ---
 import Head from '@components/Head.astro';
 import Layout from '@layouts/Layout.astro';
+import Hero from '@components/Hero.astro';
+import Projects from '@components/Projects.astro';
 
 // Component Script:
 // You can write any JavaScript/TypeScript that you'd like here.
@@ -14,9 +16,21 @@ const description =
 
 <html lang="en">
   <Head {title} {description} {permalink} />
-  <Layout>Content...</Layout>
+  <Layout>
+    <Hero />
+    <Projects />
+
+    <h2>
+      I love working on freelance projects. Email me and let’s see if we can find a solution to your
+      problems (not those kind of problems)...
+    </h2>
+  </Layout>
 </html>
 
 <style lang="scss">
-
+  h2 {
+    font-size: 1.6rem;
+    padding: 5rem 3rem;
+    text-align: center;
+  }
 </style>

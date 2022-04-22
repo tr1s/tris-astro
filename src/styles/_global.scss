@@ -35,6 +35,7 @@ body {
 .inner-wrapper {
   max-width: 1400px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 /* Global typography styles
@@ -73,6 +74,8 @@ textarea,
 a {
   display: inline;
   text-decoration: none;
+  font-size: inherit;
+  text-decoration: underline;
 }
 
 ul,

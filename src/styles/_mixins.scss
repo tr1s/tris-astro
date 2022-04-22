@@ -2,10 +2,9 @@
 ========================================================================== */
 
 $breakpoints: (
-  'phone': 400px,
-  'phone-wide': 480px,
-  'phablet': 560px,
-  'tablet-small': 640px,
+  'phone-small': 375px,
+  'phone-large': 425px,
+  'phone': 640px,
   'tablet': 768px,
   'tablet-wide': 1024px,
   'desktop': 1248px,
@@ -15,6 +14,9 @@ $breakpoints: (
 @mixin mq($width, $type: min) {
   @if map_has_key($breakpoints, $width) {
     $width: map_get($breakpoints, $width);
+    @if $type == min {
+      $width: $width + 1px;
+    }
     @if $type == max {
       $width: $width - 1px;
     }
@@ -24,51 +26,31 @@ $breakpoints: (
   }
 }
 
-/* BREAKPOINTS */
-@mixin respond-to($breakpoint) {
-  @if $breakpoint== 'mobile-small' {
-    @media (max-width: 320px) {
-      @content;
-    }
-  } @else if $breakpoint== 'mobile' {
-    @media (max-width: 375px) {
-      @content;
-    }
-  } @else if $breakpoint== 'mobile-large' {
-    @media (max-width: 414px) {
-      @content;
-    }
-  } @else if $breakpoint== 'tablet' {
-    @media (max-width: 768px) {
-      @content;
-    }
-  } @else if $breakpoint== 'tablet-large' {
-    @media (max-width: 1024px) {
-      @content;
-    }
-  } @else if $breakpoint== 'desktop-13' {
-    @media (max-width: 1280px) {
-      @content;
-    }
-  } @else if $breakpoint== 'desktop-15' {
-    @media (max-width: 1440px) {
-      @content;
-    }
-  } @else if $breakpoint== 'desktop-16' {
-    @media (min-width: 1792px) {
-      @content;
-    }
-  } @else {
-    @media ($breakpoint) {
-      @content;
-    }
-  }
+/* Fonts
+========================================================================== */
+
+@mixin font-slanted($weight: 700) {
+  font-family: var(--font-slanted);
+  font-weight: $weight;
+}
+@mixin font-backslant($weight: 300) {
+  font-family: var(--font-backslant);
+  font-weight: $weight;
 }
 
-/* CENTERING */
+/* Centering */
 @mixin centered {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+/* Push-auto */
+/* To quickly centre a block element without having to worry about if there's any top or bottom margin already applied. */
+@mixin push--auto {
+  margin: {
+    left: auto;
+    right: auto;
+  }
 }

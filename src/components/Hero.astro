@@ -1,0 +1,33 @@
+<div class="inner-wrapper">
+  <header>
+    <h1>
+      Tris is a <span>web developer</span>, <span>internet designer</span>, and <span
+        >digital musician</span
+      > living in <span>Roncy</span>.
+    </h1>
+  </header>
+</div>
+
+<style lang="scss">
+  @use '../styles/_mixins' as *;
+
+  header {
+    padding: 6rem 4rem;
+    h1 {
+      font-size: 1.6rem;
+      text-align: center;
+      span:nth-of-type(1) {
+        @include font-backslant(700);
+      }
+      span:nth-of-type(2) {
+        font-weight: 700;
+      }
+      span:nth-of-type(3) {
+        @include font-slanted(700);
+      }
+      span:nth-of-type(4) {
+        text-decoration: underline;
+      }
+    }
+  }
+</style>

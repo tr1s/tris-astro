@@ -5,30 +5,60 @@
   --font-fallback-sans-serif: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
     helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
 
-  --font-body: 'GTFAdieuTRIAL', var(--font-fallback-sans-serif);
+  --font-body: 'GTFAdieu', var(--font-fallback-sans-serif);
   --font-primary: var(--font-body);
+
+  --font-slanted: 'GTFAdieu-Slanted';
+  --font-backslant: 'GTFAdieu-Backslant';
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&display=swap');
 
+/* GTFAdieu */
 @font-face {
-  font-family: 'GTFAdieuTRIAL';
+  font-family: 'GTFAdieu';
   font-weight: 300;
   font-style: normal;
   font-display: swap;
-  src: url('/public/fonts/GTFAdieuTRIAL-Light.otf') format('opentype');
+  src: url('/fonts/GTFAdieuTRIAL-Light.otf') format('opentype');
 }
 @font-face {
-  font-family: 'GTFAdieuTRIAL';
+  font-family: 'GTFAdieu';
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: url('/public/fonts/GTFAdieuTRIAL-Regular.otf') format('opentype');
+  src: url('/fonts/GTFAdieuTRIAL-Regular.otf') format('opentype');
 }
 @font-face {
-  font-family: 'GTFAdieuTRIAL';
+  font-family: 'GTFAdieu';
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-  src: url('/public/fonts/GTFAdieuTRIAL-Bold.otf') format('opentype');
+  src: url('/fonts/GTFAdieuTRIAL-Bold.otf') format('opentype');
+}
+
+/* GTFAdieu Back-slant*/
+@font-face {
+  font-family: 'GTFAdieu-Backslant';
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/GTFAdieuTRIAL-LightBackslant.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'GTFAdieu-Backslant';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/GTFAdieuTRIAL-BoldBackslant.otf') format('opentype');
+}
+
+/* GTFAdieu slanted */
+@font-face {
+  font-family: 'GTFAdieu-Slanted';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/GTFAdieuTRIAL-BoldSlanted.otf') format('opentype');
 }

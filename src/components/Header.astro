@@ -1,33 +1,19 @@
+---
+import URL from '@components/URL.astro';
+---
+
 <header class="header">
-  <a href="https://tris.codes" class="url">
-    <p class="url-top">https<span class="punctuation">://</span></p>
-    <p class="url-bottom">
-      <span class="keyword">tris<span class="punctuation">.</span></span>codes<span
-        class="punctuation">/</span
-      >
-    </p>
-  </a>
+  <nav class="inner-wrapper">
+    <URL domain="tris" tld="codes" url="https://tris.codes" />
+  </nav>
 </header>
 
 <style lang="scss">
   @use '../styles/_mixins.scss' as *;
 
   .header {
-    padding: 1rem;
-    border-bottom: 1px solid #e1e1e1;
-    margin-bottom: 2rem;
-    .url {
-      color: #848484;
-      display: inline-block;
-      flex-direction: column;
-    }
-    .punctuation {
-      color: #4a4a4a;
-      font-weight: 400;
-    }
-    .keyword {
-      color: #000000;
-      font-weight: 400;
-    }
+    border-bottom: 1px solid var(--border);
+    padding: 0.8rem 0;
+    margin-bottom: 0;
   }
 </style>

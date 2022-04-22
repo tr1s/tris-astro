@@ -1,0 +1,47 @@
+---
+const { subdomain, domain, tld, path, url } = Astro.props;
+---
+
+<a href={url} class="url">
+  <p class="url-top">https<span class="punctuation">://</span></p>
+
+  <p class="url-bottom">
+    <!-- {subdomain && (<span>{subdomain}.</span>)} -->
+    <span class="domain">{domain}<span class="punctuation">.</span></span>{tld}<span
+      class="punctuation">/{path}</span
+    >
+  </p>
+</a>
+
+<style lang="scss">
+  @use '../styles/_mixins.scss' as *;
+
+  .url {
+    --tansition: 0.3s all ease;
+    color: #848484;
+    display: inline-block;
+    flex-direction: column;
+    text-decoration: none;
+    transition: 0.3s all ease;
+    &:hover,
+    &:focus {
+      color: var(--color-accent);
+      transition: var(--tansition);
+    }
+    &:hover .domain,
+    &:focus .domain {
+      color: var(--color-accent);
+      transition: var(--tansition);
+    }
+    .punctuation {
+      color: #4a4a4a;
+      font-weight: 400;
+      transition: var(--tansition);
+    }
+    .domain {
+      color: #000000;
+      font-weight: 400;
+      transition: var(--tansition);
+    }
+  }
+</style>

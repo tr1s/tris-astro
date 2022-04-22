@@ -14,12 +14,27 @@ import Footer from '@components/Footer.astro';
 </body>
 
 <style lang="scss">
+  @use '../styles/_mixins.scss' as *;
+
+  body.wrapper {
+  }
+
   .container {
+    @include push--auto;
+    max-width: 375px;
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    & > * {
-      grid-column: span 6;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    overflow: hidden;
+    @include mq(phone-small, min) {
+      border: 2px solid var(--border);
+      border-top: none;
+    }
+    & > :global(*) {
+      grid-column: 1 / -1;
       margin-bottom: 3rem;
+      &:not(:last-child) {
+        margin-bottom: 0; /* not working currently */
+      }
     }
   }
 </style>

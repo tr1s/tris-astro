@@ -1,0 +1,105 @@
+---
+import Head from '@components/Head.astro';
+import eye from '/public/icons/eye-open-close.svg';
+---
+
+<html lang="en">
+  <body>
+    <Head title="Testing... testing..." />
+    <div class="grid">
+      <div class="box box-1">
+        <h1>
+          Tris is a web developer, hobbyist designer, and digital creative living in <a
+            href="https://www.google.com/search?q=roncesvalles">Roncy</a
+          >.
+        </h1>
+        <p>
+          I create websites with focus on performance, user experience, accessibility, ethical
+          design, and aesthetics. I strive for simplicity and have a very keen <img src={eye} alt=""
+          /> for design.
+        </p>
+      </div>
+      <div class="box box-2"></div>
+      <div class="box box-3"></div>
+      <div class="box box-4"></div>
+    </div>
+    <div class="flow">
+      <h1>I am an H1</h1>
+    </div>
+  </body>
+</html>
+
+<style lang="scss">
+  @use '../styles/_mixins.scss' as *;
+
+  body {
+    margin: 0;
+  }
+  .grid {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: minmax(360px, 3fr) 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0.8rem;
+    padding: 0.8rem;
+    background: black;
+  }
+  .box {
+    border-radius: var(--border-radius);
+    transition: 0.8s all ease;
+    &:hover {
+      background-position: 10%;
+      transition: 0.8s all ease;
+    }
+    h1 {
+      font-size: 2.6vw;
+      margin-bottom: 2rem;
+    }
+    p {
+      // padding: 2rem;
+      img {
+        width: 20px;
+        display: inline-block;
+        position: relative;
+        top: 5px;
+      }
+    }
+  }
+  .box-1 {
+    padding: 6rem;
+    background: skyblue;
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .box-2 {
+    background: url('/images/me1.jpg');
+    background-size: cover;
+    background-position: center;
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .box-3 {
+    background: url('/public/images/me4.jpg');
+    background-size: cover;
+    background-position: center;
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .box-4 {
+    background: url('/public/images/me2.jpg');
+    background-size: cover;
+    background-position: center;
+    grid-column: 4;
+    grid-row: 1;
+  }
+
+  .flow {
+    h1 {
+      width: fit-content;
+      @include push--auto;
+    }
+  }
+</style>
