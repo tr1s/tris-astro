@@ -5,8 +5,9 @@
   --font-fallback-sans-serif: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
     helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
 
-  --font-body: 'GTFAdieu', var(--font-fallback-sans-serif);
-  --font-primary: var(--font-body);
+  --font-primary: 'GTFAdieu', var(--font-fallback-sans-serif);
+  --font-secondary: 'Source-Sans-3', var(--font-fallback-sans-serif);
+  --font-tertiary: 'GTFOpposit', var(--font-fallback-sans-serif);
 
   --font-slanted: 'GTFAdieu-Slanted';
   --font-backslant: 'GTFAdieu-Backslant';
@@ -61,4 +62,31 @@
   font-style: normal;
   font-display: swap;
   src: url('/fonts/GTFAdieuTRIAL-BoldSlanted.otf') format('opentype');
+}
+
+/* GTFOpposit */
+// @font-face {
+//   font-family: 'GTFOpposit';
+//   font-weight: 900;
+//   font-style: normal;
+//   font-display: swap;
+//   src: url('/fonts/GTFOppositTRIAL-Heavy.otf') format('opentype');
+// }
+
+/* Source Sans 3 */
+@font-face {
+  font-family: 'Source-Sans-3';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/source-sans-3-v4-latin-regular.woff2') format('woff2'),
+    url('/fonts/source-sans-3-v4-latin-regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'Source-Sans-3';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/source-sans-3-v4-latin-700.woff2') format('woff2'),
+    url('/fonts/source-sans-3-v4-latin-700.woff') format('woff');
 }

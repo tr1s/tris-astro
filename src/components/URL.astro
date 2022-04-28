@@ -17,12 +17,12 @@ const { subdomain, domain, tld, path, url } = Astro.props;
   @use '../styles/_mixins.scss' as *;
 
   .url {
-    --tansition: 0.3s all ease;
+    --tansition: 0.4s all ease;
     color: #848484;
-    display: inline-block;
-    flex-direction: column;
     text-decoration: none;
-    transition: 0.3s all ease;
+    transition: var(--transition);
+    white-space: nowrap;
+    overflow: hidden;
     &:hover,
     &:focus {
       color: var(--color-accent);
@@ -32,6 +32,10 @@ const { subdomain, domain, tld, path, url } = Astro.props;
     &:focus .domain {
       color: var(--color-accent);
       transition: var(--tansition);
+    }
+    .url-bottom {
+      word-wrap: nowrap;
+      overflow-wrap: normal;
     }
     .punctuation {
       color: #4a4a4a;

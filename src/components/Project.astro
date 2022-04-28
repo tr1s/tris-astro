@@ -1,20 +1,39 @@
 ---
 import URL from '@components/URL.astro';
 
-const { subdomain, domain, tld, path, url } = Astro.props;
+const { subdomain, domain, tld, path, url, details } = Astro.props;
 ---
 
 <article>
   <URL {subdomain} {domain} {tld} {path} {url} />
   <figure><div>???</div></figure>
-  <p class="details">Built w/ Vue.js and Nuxt</p>
+  <p class="details">{details}</p>
+  <p class="number"></p>
 </article>
 
 <style lang="scss">
   @use '../styles/_mixins.scss' as *;
-
   article {
     background: white;
+    position: relative;
+
+    /* project number counter */
+    &::before {
+      content: counter(project-counter);
+      counter-increment: project-counter;
+      position: absolute;
+      top: -1.6rem;
+      right: 1.3rem;
+      font-size: 8.9rem;
+      z-index: 1;
+      font-family: 'GTFAdieu-Slanted';
+      font-weight: 700;
+      -webkit-text-stroke-width: 2px;
+      -webkit-text-stroke-color: black;
+      color: var(--color-white);
+      text-shadow: -4px 4px 30px var(--color-accent);
+      text-shadow: -8px 8px 0 var(--color-magenta-2);
+    }
     figure {
       height: 207px;
       border-radius: 4px;
@@ -36,6 +55,8 @@ const { subdomain, domain, tld, path, url } = Astro.props;
       }
     }
     p.details {
+      font-family: var(--font-secondary);
+      font-weight: 400;
       font-size: 1.2rem;
       margin-left: 3rem;
       margin-top: 0.6rem;

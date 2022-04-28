@@ -6,10 +6,12 @@ const SectionTitle = () => {
   return (
     <section className={styles.projects}>
       <div className="inner-wrapper">
-        <h2>Projects</h2>
-        <Marquee play>
+        <div className="marquee-container">
+          <h2 className="marquee">Projectssss</h2>
+        </div>
+        {/* <Marquee play>
           I can be a React component, multiple React components, or just some text.
-        </Marquee>
+        </Marquee> */}
       </div>
     </section>
   );
