@@ -1,9 +1,9 @@
 <footer>
   <div class="inner-wrapper">
     <p class="links">Twitter ⸱ GitHub ⸱ LinkedIn</p>
-    <p class="links">Instagram ⸱ Nightizm ⸱ SoundCloud</p>
-    <p class="name">Tristan Lawrence — tris.codes</p>
-    <p class="copyright">Built w/ tender loving care ✨ 🌸 ⸱</p>
+    <p class="copyright">
+      ©2022 ⸱ <span>tris.codes</span> / <span>Nightizm</span> ⸱ ⸱ ⸱ ⸱ ⸱ ⸱
+    </p>
   </div>
 </footer>
 
@@ -14,25 +14,23 @@
     background: var(--color-black);
     margin-bottom: 0;
     color: white;
-    padding: 2.5rem 0;
-    p:not(:last-child) {
-      margin-bottom: 0.7rem;
-    }
+    padding: 1.5rem 0;
 
     .links {
       color: #acacac;
       font-size: 1.2rem;
       @include font-backslant(300);
       line-height: 2;
-    }
-    .name {
-      margin-bottom: 1.6rem !important;
+      margin-bottom: 0.5rem !important;
     }
     .copyright {
       color: #acacac;
       font-size: 1.2rem;
       position: relative;
       margin-left: 3rem;
+      span {
+        color: var(--color-white);
+      }
     }
     .copyright::before {
       content: '';

@@ -32,7 +32,16 @@
       }
       span:nth-of-type(4) {
         text-decoration: underline;
-        color: #715cf4;
+        color: var(--color-accent);
+        a {
+          text-decoration-color: var(--color-black);
+          transition: var(--transition);
+          &:hover,
+          &:focus {
+            color: var(--color-black);
+            transition: var(--transition);
+          }
+        }
       }
     }
   }
