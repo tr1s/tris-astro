@@ -20,14 +20,14 @@ import Footer from '@components/Footer.astro';
   }
 
   .container {
-    @include push--auto;
     max-width: 375px;
+    @include push--auto;
+    margin-top: 2rem;
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
     overflow: hidden;
     @include mq(phone-small, min) {
       border: 2px solid var(--border);
-      border-top: none;
     }
     & > :global(*) {
       grid-column: 1 / -1;

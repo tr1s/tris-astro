@@ -21,8 +21,8 @@ const description =
     <Projects />
 
     <h2>
-      I love working on freelance projects. Email me and let’s see if we can find a solution to your
-      problems (not those kind of problems)...
+      I’m just a boy who loves to create—<a href="mailto:trislaw@gmail.com">Msg me</a> and let’s see
+      if we can find a way to solve your problems (not those kind of problems)...
     </h2>
   </Layout>
 </html>
@@ -30,7 +30,17 @@ const description =
 <style lang="scss">
   h2 {
     font-size: 1.6rem;
-    padding: 5rem 3rem;
+    padding: 5rem 4rem;
     text-align: center;
+    a {
+      color: var(--color-accent);
+      text-decoration-color: var(--color-black);
+      transition: var(--transition);
+      &:hover,
+      &:focus {
+        color: var(--color-black);
+        transition: var(--transition);
+      }
+    }
   }
 </style>

@@ -1,11 +1,20 @@
 <footer>
   <div class="inner-wrapper">
-    <p class="links">Twitter ⸱ GitHub ⸱ LinkedIn</p>
+    <div class="links">
+      <a href="https://twitter.com/triscodes" target="_blank" rel="noopener noreferrer">Twitter</a> ⸱
+      <a href="https://github.com/tr1s" target="_blank" rel="noopener noreferrer">GitHub</a> ⸱ <a
+        href="https://www.linkedin.com/in/tristanlawrence/"
+        target="_blank"
+        rel="noopener noreferrer">LinkedIn</a
+      > ⸱ <a href="https://nightizm.com" target="_blank" rel="noopener noreferrer">Nightizm</a>
+    </div>
     <p class="copyright">
-      ©2022 ⸱ <span>tris.codes</span> / <span>Nightizm</span> ⸱ ⸱ ⸱ ⸱ ⸱ ⸱
+      ©2022 ⸱ <span>tris.codes</span> + ⸱ + ⸱ + ⸱ + ⸱ + ⸱ + ⸱ + ⸱ + ⸱ + ⸱ + ⸱ + ⸱ + ⸱ +
     </p>
   </div>
 </footer>
+
+<script> console.log('FOOTER'); </script>
 
 <style lang="scss">
   @use '../styles/_mixins.scss' as *;
@@ -22,12 +31,24 @@
       @include font-backslant(300);
       line-height: 2;
       margin-bottom: 0.5rem !important;
+      a {
+        text-decoration: none;
+        transition: var(--transition);
+        &:hover,
+        &:focus {
+          color: var(--color-white);
+          text-decoration: line-through;
+          text-decoration-color: var(--color-accent);
+          transition: var(--transition);
+        }
+      }
     }
     .copyright {
       color: #acacac;
       font-size: 1.2rem;
       position: relative;
       margin-left: 3rem;
+      white-space: nowrap;
       span {
         color: var(--color-white);
       }

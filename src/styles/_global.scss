@@ -5,19 +5,19 @@ html {
   font-size: 62.5%; /* 1rem = 10px, 3.5rem = 35px; */
   /* custom scrollbar for firefox, soon to be default? */
   scrollbar-width: normal;
-  scrollbar-color: var(--accent) var(--black-soft);
+  scrollbar-color: var(--color-accent) var(--color-black);
   /* custom scrollbar for webkit (safari / chrome) */
   /* use vw unit if you don't want the scrollbar to grow on zoom */
   &::-webkit-scrollbar {
-    width: 10px;
+    width: 1.3rem;
   }
   &::-webkit-scrollbar-track {
     border-left: 1px solid rgba(0, 0, 0, 0.3);
     background: rgba(254, 249, 247, 1);
-    background: var(--black-soft);
+    background: #dfdfdf;
   }
   &::-webkit-scrollbar-thumb {
-    background: var(--accent);
+    background: var(--color-accent);
   }
 }
 
