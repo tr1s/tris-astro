@@ -1,6 +1,9 @@
 /* Global styles
   ========================================================================== */
 
+// ::selection {
+// }
+
 html {
   font-size: 62.5%; /* 1rem = 10px, 3.5rem = 35px; */
   /* custom scrollbar for firefox, soon to be default? */
@@ -22,9 +25,10 @@ html {
 }
 
 body {
-  font-weight: 300;
-  font-family: var(--font-primary);
+  color: #3a3843;
   font-size: 1.6rem;
+  font-family: var(--font-primary);
+  font-weight: 300;
 }
 
 .wrapper {
@@ -68,7 +72,6 @@ textarea,
   margin: 0;
   font-size: 1.6rem;
   letter-spacing: 0.101rem;
-  color: var(--theme-text-light);
 }
 
 a {
@@ -76,6 +79,7 @@ a {
   text-decoration: none;
   font-size: inherit;
   text-decoration: underline;
+  color: var(--color-accent);
 }
 
 ul,

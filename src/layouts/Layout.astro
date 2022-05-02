@@ -17,12 +17,13 @@ import Footer from '@components/Footer.astro';
   @use '../styles/_mixins.scss' as *;
 
   body.wrapper {
+    background: var(--theme-bg);
   }
 
   .container {
     max-width: 375px;
     @include push--auto;
-    margin-top: 2rem;
+    margin-top: 3rem;
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
     overflow: hidden;

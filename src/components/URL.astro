@@ -32,6 +32,11 @@ const { subdomain, domain, tld, path, url } = Astro.props;
       color: var(--color-accent);
       transition: var(--transition);
     }
+    &:hover .punctuation,
+    &:focus .punctuation {
+      color: var(--color-black);
+      transition: var(--transition);
+    }
     .url-bottom {
       word-wrap: nowrap;
       overflow-wrap: normal;
